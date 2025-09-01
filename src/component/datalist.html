@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input autocomplete="off" id="txt" type="text" list="dsfree" onchange="manageDataList(event)" onfocus="manageDataList(event)"  onkeyup="manageDataList(event)">
+    <datalist id="ds">
+
+        <option value="Apple"></option>
+        <option value="Almora"></option>
+        <option value="Bat"></option>
+        <option value="Ball"></option>
+    </datalist>
+    <datalist id="dsfree"></datalist>
+    <script>
+        let txt=document.getElementById("txt");
+        const ds=document.getElementById("ds");
+        const freeds=document.getElementById("dsfree");
+        function manageDataList(event)
+        {
+            let val=event.target.value;
+
+console.log(val);
+let length=val.length;
+if(length<3)
+{
+    console.log("<3");
+txt.list="dsfree";
+}
+else 
+{
+console.log("<4");
+txt.list="ds";
+}
+console.log(length);
+console.log(txt);
+console.log(txt.list);
+        }
+    </script>
+</body>
+</html>
