@@ -33,7 +33,7 @@ function CompanyAssignment() {
       navigate("/welcome");
     } catch (error) {
       console.error("API Error:", error);
-      setMessage("Email already exists");
+      setMessage("Database Error");
     }
   };
 
