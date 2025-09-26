@@ -53,13 +53,10 @@ function CompanyAssignment() {
           height: "100%",
           objectFit: "cover",
           zIndex: -1,
-        }}
-      >
+        }}>
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        </video>
 
-      
       <View
         style={{
           flex: 1,
@@ -67,7 +64,7 @@ function CompanyAssignment() {
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
-          zIndex: 1, 
+          // zIndex: 1, 
         }}
       >
         <View
@@ -80,7 +77,7 @@ function CompanyAssignment() {
            background: "linear-gradient(132deg,blue,white,blue)",
         }}
         >
-          <Text style={{ fontSize: 24, marginBottom: 20, textAlign: "center", fontWeight: "bold" }}>
+          <Text style={{ fontSize: 24, marginBottom: 20, textAlign: "center", fontWeight: "bold"}}>
             Signup
           </Text>
 
@@ -108,7 +105,7 @@ function CompanyAssignment() {
             placeholder="Enter password"
             secureTextEntry
           />
-
+          
           <Text>Confirm Password</Text>
           <TextInput
             style={{ borderWidth: 1, marginBottom: 15, padding: 8, borderRadius: 5 }}
@@ -117,7 +114,6 @@ function CompanyAssignment() {
             placeholder="Confirm password"
             secureTextEntry
           />
-
           <Button title="Submit" onPress={handleSignup} />
 
           {message ? (
@@ -137,5 +133,4 @@ function CompanyAssignment() {
     </View>
   );
 }
-
 export default CompanyAssignment;
